@@ -4,9 +4,14 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.dark-mode {
+.dark_mode{
+    color: #f8f8f8;
+    /*background-color: #1c1c1c;*/
+    background-color: #444444;
+    border: none;
+}
+body.dark_mode #footer a:hover,body.dark_mode h1{
     color: white;
-    background: #aaaaaa;
 }
 
 #container {
@@ -45,10 +50,9 @@ button {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif
 }
 
-button:hover{
-    background-color: white ;
+button:hover {
+    background-color: white;
     border: 1px solid #aaaaaa;
-
 }
 
 h1 {
@@ -64,8 +68,8 @@ h1 {
 p {
     margin: 0;
     padding: 0.25rem 0;
-
 }
+
 hr {
     color: #aaaaaa;
     height: 0.05rem;
@@ -97,16 +101,21 @@ tr {
 }
 
 tr:hover {
-    /*background-color: #E1F2FB;*/
     background-color: #FAEBE0;
 }
+
+body.dark_mode tr:hover{
+    background-color: white;
+    color: #1c1c1c ;
+}
+
 
 INPUT[type="checkbox"] {
     cursor: pointer;
 }
 
 [data-installation='Development'] label::before {
-    content:"DEV";
+    content: "DEV";
     color: red;
     vertical-align: super;
     font-size: 0.5rem;
@@ -140,8 +149,6 @@ INPUT[type="checkbox"] {
 }
 
 
-
-
 /*************FOOTER*************/
 #footer {
     text-align: center;
@@ -149,4 +156,6 @@ INPUT[type="checkbox"] {
     color: #aaaaaa;
 }
 
-
+#footer a:visited{
+    color: #aaaaaa;
+}
