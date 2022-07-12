@@ -1,0 +1,152 @@
+body {
+    padding: 0 1%;
+    margin: 0 1%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dark-mode {
+    color: white;
+    background: #aaaaaa;
+}
+
+#container {
+    min-width: 300px;
+    max-height: 600px;
+    margin: 0 0.2rem;
+}
+
+#header-div {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 2rem;
+    margin: auto;
+    padding-left: 0.5rem;
+    display: grid;
+    grid-template-areas: "a b b b b c c";
+    align-content: center;
+}
+
+.btn-div {
+    display: inline-grid;
+    row-gap: 0.1rem;
+    alignment: right;
+    padding-left: 1rem;
+    grid-template-areas: "a" "b";
+
+}
+
+button {
+    font-size: 0.4rem;
+    cursor: pointer;
+    background-color: #FAEBE0;
+    border-radius: 3px;
+    border: 1px solid #aaaaaa;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif
+}
+
+button:hover{
+    background-color: white ;
+    border: 1px solid #aaaaaa;
+
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0;
+    display: inline-block;
+    color: #969393;
+    padding-left: 1rem;
+    padding-bottom: 2px;
+}
+
+p {
+    margin: 0;
+    padding: 0.25rem 0;
+
+}
+hr {
+    color: #aaaaaa;
+    height: 0.05rem;
+    border: none;
+    background-color: #aaaaaa;
+    margin: 2px 0;
+}
+
+#logo-img {
+    height: 1.4rem;
+    width: 1.4rem;
+    margin: auto;
+}
+
+/*************TABLE LIST************/
+table {
+    width: 95%;
+    text-align: left;
+    margin: auto;
+    border: 0;
+    border-collapse: collapse;
+}
+
+tr {
+    font-size: 0.75rem;
+    padding: 1px 3px;
+    vertical-align: center;
+    text-align: left;
+}
+
+tr:hover {
+    /*background-color: #E1F2FB;*/
+    background-color: #FAEBE0;
+}
+
+INPUT[type="checkbox"] {
+    cursor: pointer;
+}
+
+[data-installation='Development'] label::before {
+    content:"DEV";
+    color: red;
+    vertical-align: super;
+    font-size: 0.5rem;
+    font-weight: bold;
+}
+
+[data-extension-enabled ='false'] {
+    opacity: 80%;
+}
+
+.grey {
+    color: #aaaaaa;
+    font-size: 0.625rem;
+}
+
+.list-div {
+    overflow: hidden;
+    overflow-y: scroll ! important;
+    max-height: 31.5rem;
+    text-align: center;
+    max-width: 18.5rem;
+}
+
+.ext-img {
+    width: 20px;
+}
+
+.img-col {
+    width: 10%;
+    padding-right: 35px;
+}
+
+
+
+
+/*************FOOTER*************/
+#footer {
+    text-align: center;
+    font-weight: 600;
+    color: #aaaaaa;
+}
+
+
