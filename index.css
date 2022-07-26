@@ -1,17 +1,24 @@
+:root {
+    --darkmode-dark: #444444;
+    --white: 255,255,255;
+    --scrollrgba: 0,0,0
+  }
+
 body {
     padding: 0 1%;
     margin: 0 1%;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.5s linear, color 1s linear;
 }
 
-.dark_mode{
-    color: #f8f8f8;
-    /*background-color: #1c1c1c;*/
-    background-color: #444444;
+body.dark_mode {
+    color: rgba(var(--white));
+    background-color: var(--darkmode-dark);
     border: none;
 }
-body.dark_mode #footer a:hover,body.dark_mode h1{
-    color: white;
+
+body.dark_mode #footer a:hover, body.dark_mode h1 {
+    color: rgba(var(--white));
 }
 
 #container {
@@ -82,6 +89,11 @@ hr {
     height: 1.4rem;
     width: 1.4rem;
     margin: auto;
+    transition: transform 0.1s linear;
+}
+
+#logo-img:active {
+    transform: translate(2px, 2px);
 }
 
 /*************TABLE LIST************/
@@ -104,9 +116,9 @@ tr:hover {
     background-color: #FAEBE0;
 }
 
-body.dark_mode tr:hover{
-    background-color: white;
-    color: #1c1c1c ;
+body.dark_mode tr:hover {
+    background-color: rgba(var(--white));
+    color: #1c1c1c;
 }
 
 
@@ -156,6 +168,36 @@ INPUT[type="checkbox"] {
     color: #aaaaaa;
 }
 
-#footer a:visited{
+#footer a:visited {
     color: #aaaaaa;
+}
+
+
+/*************SCROLLBAR*************/
+::-webkit-scrollbar{
+    width: 0.8em;
+    height: 0.8em;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 100vw;
+    background: rgba(var(--scrollrgba), .5);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(var(--scrollrgba), .3);
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 100vw;
+    margin-block: 0.5em;
+    background:  rgba(var(--white));   
+}
+
+body.dark_mode ::-webkit-scrollbar-thumb{
+    background: rgba(var(--white),.5);
+
+}
+
+body.dark_mode ::-webkit-scrollbar-track{
+    background: var(--darkmode-dark);
 }
